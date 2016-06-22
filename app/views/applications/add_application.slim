@@ -1,0 +1,22 @@
+.dividerRow.paddingLeft15.paddingRight15
+  .marginSpacer
+  h2.noMargin Add an Application
+  .marginSpacer
+.dividerRow.bottomBorder
+.dividerRow.paddingLeft15.paddingRight15
+  .marginSpacer
+  = form_for(@application, url_for(:applications, :add_application)) do |f|
+    h3 Application Name
+    .row
+      .col-md-3
+        = f.text_field :name, {class: 'form-control', id: 'name_input', placeholder:'staging-foo.io'}
+        .marginSpacer
+      .col-md-3
+        = f.submit "Add Application", {class: "btn btn-default col-md-12", style: "background-color:#72C48C; color:#FFF; font-weight:500; border:none}", method: 'post'}
+    - unless @application.errors.empty?
+      .error_block.errorText
+        - @application.errors.each do |e|
+          = e
+          br
+  p Adding your application in Tidas creates a config block for you to use when integrating our middleware.
+  i We recommend setting up test, staging, and production applications as you roll out Tidas Authentication

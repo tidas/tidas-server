@@ -1,0 +1,30 @@
+.container.marginTop100
+  .row
+    .col-sm-6.col-sm-offset-3
+      h3.foamGreenText.centerText Register to gain access to our API
+  .row
+    .col-sm-2.col-sm-offset-3
+      img.tidasLogo src="/images/tidas_logo_1.png"
+    .col-sm-4
+      .marginSpacer
+      = form_for(@customer, url_for(:accounts, :register)) do |f|
+        .form-group
+          label.foamGreenText for='email' Name
+          = f.text_field :name, {class: 'form-control', id: 'name_input', placeholder:'Bill Lumbergh'}
+        .form-group
+          label.foamGreenText for='email' Email Address
+          = f.text_field :email, {class: 'form-control', id: 'email_input', placeholder:'lumbergh.bill@initech.com'}
+        .form-group
+          label.foamGreenText for='password' Password
+          = f.text_field :password, {class: 'form-control', type:'password', id: 'password_input', placeholder:'******'}
+        .form-group
+          label.foamGreenText for='password_confirmation' Confirmation
+          = f.text_field :password_confirmation, {class: 'form-control', type:'password', id: 'password_confirmation_input', placeholder:'******'}
+        = f.submit "Sign Me Up", {class:"btn btn-default foamGreenButton", method: 'post'}
+        .rightText.floatRight
+          a.foamGreenText href=url_for(:sessions, :login) Existing User?
+      - unless @customer.errors.empty?
+        .error_block.errorText
+          - @customer.errors.each do |e|
+            = e
+            br

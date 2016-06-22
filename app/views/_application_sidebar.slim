@@ -1,0 +1,20 @@
+= stylesheet_link_tag :sidebar
+- @customer = customer
+
+#sidebar.rightBorder
+  .dividerRow
+    .dividerRow
+      .marginSpacer
+      h2.lightText.noMargin.marginLeft15 Applications
+      .marginSpacer
+    .dividerRow
+      hr.noMargin
+    .dividerRow
+      .marginSpacer
+      .marginLeft15
+        - @customer.apps.each do |app|
+          a href=url_for(:applications, :show, app_id:app.id)
+            h4.lightText style="margin:0" =app.name
+          br
+        a href=url_for(:applications, :add_application)
+          h4.noMargin.foamGreenText + Add an Application

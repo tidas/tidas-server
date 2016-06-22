@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+set -m
+cd "${0%/*}/../"
+
+function log() {
+  if [[ -t 1 ]]; then
+    echo -e "\x1b[1m\x1b[32m>>>\x1b[0m \x1b[1m\x1b[37m$1\x1b[0m"
+  else
+    echo ">>> $1"
+  fi
+}
+
+if [[ -f .env ]]; then
+  source .env
+fi
+
+if [[ ! `ps acx` == *redis-server* ]]; then
+  log "Starting redis-server ..."
+  redis-server &
+fi
+
+if [[ ! `ps acx` == *resque-web* ]]; then
+  log "Starting resque-web ..."
+  bundle exec resque-web
+fi
+
+log "[tidas] Starting resque workers ..."
+# TERM_CHILD=1 QUEUES=* COUNT=2 rake resque:work &
+
+log "[tidas] Starting padrino ..."
+bundle exec padrino start
+
+log "[tidas] Shutting down"
+kill $(jobs -p)
+wait

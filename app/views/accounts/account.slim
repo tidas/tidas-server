@@ -1,0 +1,31 @@
+.dividerRow.paddingLeft15.paddingRight15
+  .marginSpacer
+  h2.noMargin Account Details
+  .marginSpacer
+.dividerRow.bottomBorder
+.dividerRow.paddingLeft15.paddingRight15
+  .marginSpacer
+
+  .dividerRow
+    h4 API Access
+    span
+      b API key:&nbsp;
+      = current_user.api_key
+    br
+    span
+      b API calls:&nbsp;
+      = current_user.api_calls
+    .halfSpacer
+  .dividerRow
+    h4 Downloads
+    a.btn.btn-default.foamGreenButton href=url_for(:downloads, :libtidas)
+      |Obj-C Client Library
+    .quarterSpacer
+    a.btn.btn-default.foamGreenButton href=url_for(:downloads, :xcode_project)
+      |Xcode Example Project
+    .halfSpacer
+
+  .dividerRow
+    h4 Log Out of Tidas
+    a.btn.btn-default.foamGreenButton href=url_for(:sessions, :logout)
+      |Log Out

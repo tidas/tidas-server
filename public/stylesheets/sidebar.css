@@ -1,0 +1,9 @@
+#sidebar {
+  z-index: 2;
+  position: relative;
+  width:260px;
+  color:#fff;
+  float:left;
+  height:100%;
+  background:#0b5984;
+}

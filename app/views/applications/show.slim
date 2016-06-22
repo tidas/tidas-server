@@ -1,0 +1,39 @@
+.dividerRow.paddingLeft15.paddingRight15
+  .marginSpacer
+  h2.noMargin =@application
+  .marginSpacer
+.dividerRow.bottomBorder
+.dividerRow.paddingLeft15.paddingRight15
+
+  .dividerRow
+    h3 ="Tidas Configuration for #{@application}"
+    pre
+      ="Tidas::Configuration.configure(\n"
+      ="  api_key: \"#{current_user.api_key}\",\n"
+      ="  application: \"#{@application}\",\n"
+      ="  server: \"#{ROOT_URL}\",\n"
+      ="  timeout: 20\n"
+      |)
+  .dividerRow
+    .quarterSpacer
+  .dividerRow
+    h4 User Detail
+    span
+      b Active:
+      = " #{@application.active_identities.count} Identities"
+    br
+    span
+      b Deactivated:
+      = " #{@application.deactivated_identities.count} Identities"
+  .dividerRow
+    .quarterSpacer
+
+  - if @application.active_identities.empty? && @application.deactivated_identities.empty?
+    .dividerRow
+      span
+        h4.floatLeft It looks like nobody is using your application yet. Check our the
+        .floatLeft&nbsp;
+        a href=URL_FOR_DOCS target="_blank"
+          h4.foamGreenText.floatLeft docs
+        .floatLeft&nbsp;
+        h4.floatLeft for integration guides

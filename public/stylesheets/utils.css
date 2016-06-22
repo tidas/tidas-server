@@ -1,0 +1,400 @@
+#headerArea {
+  position: relative;
+  width: 975px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contentBlock {
+  position: relative;
+  width: 975px;
+  margin:auto;
+  overflow: hidden;
+}
+
+#leftCol {
+  position: relative;
+  float:left;
+  height: 100%;
+  min-height: 300px;
+  width:300px;
+}
+
+#rightCol {
+  position: absolute;
+  float:left;
+  width: 100%;
+  padding-left:260px;
+  height:100%;
+}
+
+.headerHolder {
+  height:55px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.faviconHolder {
+  position: relative;
+  padding-top: 15px;
+  margin-right: 5px;
+  width:20px;
+  height:35px;
+}
+
+.oldFaviconHolder {
+  position: relative;
+  display: inline-block;
+  margin-bottom:8px;
+  margin-right: 5px;
+  height: 16px;
+}
+
+.oldFaviconHolder img {
+  vertical-align: inherit;
+}
+
+.headerText {
+  display: inline-block;
+}
+
+.leftContainerWidthFix {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 300px;
+}
+
+.rightContainerWidthFix {
+  position: relative;
+  width: 674px;
+  overflow: hidden;
+}
+
+.tidasLogo {
+  width:100%;
+  max-width:162px;
+}
+
+.marginTop100 {
+  margin-top:100px;
+}
+
+.foamGreenButton {
+  background-color:#72C48C;
+  font-weight: 500;
+  border:0;
+  color:#fff;
+}
+
+.foamGreenText {
+  color:#72C58C;
+}
+
+.foamGreenText:hover a {
+  opacity: 0.8;
+}
+
+
+
+html, body {
+  margin:0;
+  padding:0;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/*
+  normal utils stuff
+*/
+
+.spacer {
+  width: 100%;
+  height: 100px;
+}
+
+.marginSpacer {
+  height: 15px;
+  width: 100%;
+}
+
+.miniSpacer {
+  height: 5px
+}
+
+.halfSpacer {
+  width: 100%;
+  height: 50px;
+}
+
+.growingHalfSpacer{
+  width: 100%;
+  min-height: 0px;
+  overflow: hidden;
+}
+
+.quarterSpacer {
+  width: 100%;
+  height:25px;
+}
+
+.col-md-half {
+  float:left;
+  width:2.979%;
+  height:1px;
+}
+
+.noLeftPadding {
+  padding-left: 0px
+}
+
+.leftHeader {
+  margin-left: 15px; 
+}
+
+.leftHeader h4 {
+  text-align: left;
+}
+
+.rightHeader {
+  margin-right: 15px; 
+}
+
+.rightHeader h4 {
+  text-align: right;
+}
+
+.reindent {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.darkContainer {
+  background-color:#ddd;
+}
+
+.arrow_up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ccc;
+  margin: auto;
+  margin-bottom: -1px;
+}
+
+.child_arrow_up {
+  margin-left: -8px;
+  bottom: -1px;
+  border-bottom-color: #ccc;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid white;
+  position: relative;
+}
+
+.floatLeft {
+  float:left;
+}
+
+.floatRight {
+  float:right;
+}
+
+.leftText {
+  text-align: left;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.rightText {
+  text-align: right;
+}
+
+.whiteText {
+  color:#fff;
+}
+
+.greyText {
+  font-weight: 200;
+  color :#aaa;
+}
+
+.dividerRow {
+  position: relative;
+  width :100%;
+  float: right;
+}
+
+#learnMoreButton {
+  margin-right: 15px;
+}
+
+.noBorder {
+  border: 0;
+}
+
+.bottomBorder {
+  border-bottom:1px solid #ddd;
+}
+
+.rightBorder {
+  border-right:1px solid #fff;
+}
+
+.noPadding {
+  padding: 0px;
+}
+
+.noMargin {
+  margin: 0;
+}
+
+div, a, p, h1, h2, h3, h4, pre {
+	font-weight: 400;
+	color: #666;
+}
+
+a.blueLink {
+  color: #5bc0de;
+}
+
+.sectionHeader {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  height: 24px;
+  font-size: 16px;
+  margin-top: 15px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.should_fix_section_header {
+  margin-top: 0;
+  border-top: 0;
+}
+
+.translucent {
+  opacity: 0.3;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.marginLeft8 {
+  margin-left: 8px;
+}
+
+.marginLeft15 {
+  margin-left: 15px;
+}
+
+.marginLeft25 {
+  margin-left: 25px;
+}
+
+.marginRight25 {
+  margin-right: 25px;
+}
+
+.paddingLeft15 {
+  padding-left: 15px;
+}
+
+.paddingRight15 {
+  padding-right: 15px;
+}
+
+.marginLeft30 {
+  margin-left: 30px;
+}
+
+.marginLeft75 {
+  margin-left: 75px;
+}
+
+.hackSearch {
+  float:right;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  color: transparent;
+}
+
+.lightText {
+  color: white;
+}
+
+.greyText {
+  color: #999;
+}
+
+.linkText {
+  color: #5bc0de;
+}
+
+.errorText{
+  color:#F17171;
+}
+
+.hidden {
+  display:none;
+}
+
+.marginSpacer {
+  height:13px;
+  width:100%;
+  float:left;
+}
+
+.spinner {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 2000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 2000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+  from { -ms-transform: rotate(0deg); }
+  to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}

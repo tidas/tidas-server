@@ -1,0 +1,15 @@
+.container.marginTop100
+  .row
+    .col-sm-6.col-sm-offset-3
+      h3.foamGreenText.centerText Click the link in the email to verify your account.
+  .row
+    .col-sm-2.col-sm-offset-3
+      img.tidasLogo src="/images/tidas_logo_1.png"
+    .col-sm-4
+      .halfSpacer
+      = form_for(@customer, url_for(:accounts, :resend_email)) do |f|
+        .form-group
+          label.foamGreenText for='email'
+            | Didn't get the email?
+          = f.text_field :email, {class: 'form-control', id: 'name_input', placeholder:'lumbergh.bill@initech.com'}
+          = f.submit "Resend Email", {class:"btn btn-default foamGreenButton", style: "margin-top:25px;", method: 'post'}

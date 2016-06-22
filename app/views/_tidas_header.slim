@@ -1,0 +1,14 @@
+= stylesheet_link_tag :header
+
+#tidasHeader.bottomBorder
+  .dividerRow
+    .floatLeft
+      a href=url_for(:dashboard, :index)
+        img.tidasHeaderImg src="/images/tidas_header_logo.png"
+        img.tidasHeaderTextImage src="/images/tidas_text.png"
+    .floatRight
+      a href=url_for(:accounts, :account)
+        h3.tidasHeaderText Account
+    .floatRight
+      a href=URL_FOR_DOCS target="_blank"
+        h3.tidasHeaderText Docs

@@ -1,0 +1,37 @@
+= favicon_tag "tidas_favicon.png"
+= stylesheet_link_tag :"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+= stylesheet_link_tag :utils
+
+- if current_user
+  - redirect url_for(:dashboard, :index)
+
+.container.marginTop100
+  .row
+    .col-sm-6.col-sm-offset-3
+      h3.foamGreenText.noHover.centerText Sign into your account
+  .row
+    .col-sm-2.col-sm-offset-3
+      img.tidasLogo src="/images/tidas_logo_1.png"
+    .col-sm-4
+      .marginSpacer
+      =form_tag 'login', {method: :post}
+        .form-group
+          label.foamGreenText.noHover for='email' Email
+          = text_field_tag :email, {class:'form-control', id: 'email_input', placeholder:'lumbergh.bill@initech.com'}
+        .form-group
+          label.foamGreenText.noHover for='password' Password
+          = text_field_tag :password, {class:'form-control', type:'password', id: 'password_input', placeholder:'* * * * * *'}
+          = hidden_field_tag :referrer, {value:request.referrer}
+        = submit_tag "Sign In", {class: "btn btn-success foamGreenButton floatLeft", method: 'post'}
+        .rightText.floatRight
+          a.foamGreenText href=url_for(:accounts, :register) New User?
+          br
+          a.foamGreenText href=url_for(:accounts, :forgot_password) Forgot Password?
+        small
+          em
+            - if params[:unauthenticated] == 'true'
+              .errorText
+                | &bull;
+                | Incorrect email or password
+            
+            

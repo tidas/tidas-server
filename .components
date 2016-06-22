@@ -1,0 +1,9 @@
+---
+:orm: datamapper
+:test: rspec
+:mock: none
+:script: none
+:renderer: slim
+:stylesheet: none
+:namespace: TidasBackend
+:migration_format: number

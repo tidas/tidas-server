@@ -1,0 +1,13 @@
+#contentArea {
+  width:100%;
+  background: #fff;
+  height: 100%;
+  overflow: scroll;
+}
+
+#wrap {
+  margin-top: 50px;
+  position: absolute;
+  height: 100%;
+  width:100%;
+}

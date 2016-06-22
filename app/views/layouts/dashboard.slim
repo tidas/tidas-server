@@ -1,0 +1,11 @@
+= favicon_tag "tidas_favicon.png"
+= stylesheet_link_tag :"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+= stylesheet_link_tag :utils
+= stylesheet_link_tag :contentArea
+
+
+= partial :tidas_header
+= partial :application_sidebar, locals: {customer: current_user}
+#rightCol
+  #contentArea
+    = yield
