@@ -38,6 +38,14 @@ module Tidas
         self
       end
 
+      def pub
+        pubstr  =  "-----BEGIN PUBLIC KEY-----\n"
+        pubstr  +=  Base64.encode64(key.to_der)
+        pubstr  +=  "-----END PUBLIC KEY-----\n"
+
+        pubstr
+      end
+
       private
 
       def initialize(attributes)
@@ -52,14 +60,6 @@ module Tidas
         pub_key_seq = OpenSSL::ASN1::Sequence.new([KEY_SEQ, @ASN1_key_bits])
       end
 
-      def pub
-        pubstr  =  "-----BEGIN PUBLIC KEY-----\n"
-        pubstr  +=  Base64.encode64(key.to_der)
-        pubstr  +=  "-----END PUBLIC KEY-----\n"
-
-        pubstr
-      end
-
       public
 
       class KeyError
@@ -72,7 +72,7 @@ module Tidas
         def export_pub
           self
         end
-        
+
         private
 
         def initialize(attributes)
