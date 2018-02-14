@@ -28,7 +28,8 @@ describe Tidas::Utilities::KeyBuilder do
     context "when not given a file to write to" do
       it "should return a string containing the public key in pub format" do
         k = valid_key_builder
-        expect(k.pub_key) == valid_pub_string
+        # binding.pry
+        expect(k.pub) == valid_pub_string
       end
     end
 
@@ -36,12 +37,12 @@ describe Tidas::Utilities::KeyBuilder do
       it "should write a string containing the public key in pub format to that file" do
         hex_bytes = "04C6314AE7C1462EE110018A720640D5C0253FBCEE49E3BC55CE9955552C3925EFBEACF72C580AD400CF415C3C7FDD6BDB04B776D1594A929CD"
         k = valid_key_builder
-        k.export_pub_key('tmp/out_test.pub')
-        expect(File.exist?('tmp/out_test.pub')) == true
+        k.export_pub('/tmp/out_test.pub')
+        expect(File.exist?('/tmp/out_test.pub')) == true
       end
 
       after do
-        File.delete('tmp/out_test.pub')
+        File.delete('/tmp/out_test.pub')
       end
     end
   end
