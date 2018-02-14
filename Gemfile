@@ -1,4 +1,4 @@
-ruby '2.1.8'
+ruby '2.2.2'
 
 source 'https://rubygems.org'
 
@@ -48,7 +48,7 @@ end
 gem 'honeybadger'
 
 # Padrino Stable Gem
-gem 'padrino', '0.12.5'
+gem 'padrino', '0.12.6'
 gem 'padrino-warden', '~> 0.20'
 
 # Or Padrino Edge
@@ -56,5 +56,5 @@ gem 'padrino-warden', '~> 0.20'
 
 # Or Individual Gems
 # %w(core support gen helpers cache mailer admin).each do |g|
-#   gem 'padrino-' + g, '0.12.5'
+#   gem 'padrino-' + g, '0.12.6'
 # end
