@@ -121,8 +121,8 @@ GEM
       activesupport (>= 3.1)
     padrino-warden (0.20.1)
       warden (>= 0.10.3)
-    rack (1.5.4)
-    rack-protection (1.5.3)
+    rack (1.5.5)
+    rack-protection (1.5.5)
       rack
     rack-ssl-enforcer (0.2.9)
     rack-test (0.6.3)
