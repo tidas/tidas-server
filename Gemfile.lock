@@ -83,7 +83,7 @@ GEM
     moneta (0.7.20)
     mono_logger (1.1.0)
     multi_json (1.13.1)
-    nokogiri (1.9.1)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     padrino (0.12.6)
       padrino-admin (= 0.12.6)
@@ -185,7 +185,7 @@ GEM
     warden (1.2.7)
       rack (>= 1.0)
     xpath (3.1.0)
-      nokogiri (~> 1.8)
+      nokogiri (~> 1.10.4)
 
 PLATFORMS
   ruby
