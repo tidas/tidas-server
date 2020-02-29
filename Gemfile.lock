@@ -130,7 +130,7 @@ GEM
     rack-ssl-enforcer (0.2.9)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
-    rake (12.3.2)
+    rake (13.0.1)
     redis (4.1.0)
     redis-namespace (1.6.0)
       redis (>= 3.0.4)
