@@ -178,7 +178,7 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (1.4.1)
-    tzinfo (1.2.7)
+    tzinfo (1.2.11)
       thread_safe (~> 0.1)
     url_mount (0.2.1)
       rack
